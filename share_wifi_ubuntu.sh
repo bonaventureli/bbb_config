@@ -1,6 +1,6 @@
 #!/bin/bash
-iptables --table nat --append POSTROUTING --out-interface eth0 -j MASQUERADE	
+iptables --table nat --append POSTROUTING --out-interface wlp3s0 -j MASQUERADE	
 
-iptables --append FORWARD --in-interface eth3 -j ACCEPT
+iptables --append FORWARD --in-interface enx38d269870254 -j ACCEPT
 
 echo 1 > /proc/sys/net/ipv4/ip_forward
